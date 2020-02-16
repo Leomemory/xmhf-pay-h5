@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import 'amfe-flexible'
 import { Button, Cell } from 'mint-ui'
 
 Vue.component(Button.name,Button)
