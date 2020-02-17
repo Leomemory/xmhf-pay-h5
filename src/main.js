@@ -4,11 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'amfe-flexible'
-import { Button, Cell } from 'mint-ui'
+import axios from '@/common/axios'
+import './styles/index.scss'
 
+import { Button, Cell } from 'mint-ui'
 Vue.component(Button.name,Button)
 Vue.component(Cell.name,Cell)
 
+Vue.use(axios)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f4f6;
+    font-size: 14px;
+    line-height: 1.4285714;
+    color: #333;
+    font-family: PingFangSC-Regular, Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+input, textarea, select, button {
+    font-size: 14px;
+    outline: none;
+}
+
+button {
+    user-select: none;
+}
+
+::-webkit-input-placeholder {
+    color: #BDBDBD;
+}
+
+img {
+    max-width: 100%;
+}
+
+.blockimg {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.border1px-bottom {
+    position: relative;
+}
+
+.border1px-bottom:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to top, #DCDCDC 0%, #DCDCDC 50%, transparent 50%);
+    background-size: 100% 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.border1px-top {
+    position: relative;
+}
+
+.border1px-top:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #DCDCDC 0%, #DCDCDC 51%, transparent 51%);
+    background-size: 100% 1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.border1px-right {
+    position: relative;
+}
+
+.border1px-right:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 1px;
+    background-image: linear-gradient(to bottom, #DCDCDC 0%, #DCDCDC 51%, transparent 51%);
+    background-size: 100% 1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.border1px-all {
+    background-image: linear-gradient(180deg, #BDBDBD, #BDBDBD 50%, transparent 50%),
+    linear-gradient(270deg, #BDBDBD, #BDBDBD 50%, transparent 50%),
+    linear-gradient(0deg, #BDBDBD, #BDBDBD 50%, transparent 50%),
+    linear-gradient(90deg, #BDBDBD, #BDBDBD 50%, transparent 50%);
+    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+    background-repeat: no-repeat;
+    background-position: top, right top, bottom, left top;
+}

@@ -1,0 +1,62 @@
+/**
+* 参考：https://github.com/frozenui/frozenui/
+* MIT License
+*/
+.vux-1px, .vux-1px-radius, .vux-1px-t, .vux-1px-b, .vux-1px-l, .vux-1px-r, .vux-1px-tb {
+    position: relative;
+    border: 0;
+    &:after {
+        content: "";
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(0.5);
+        transform-origin: 0 0;
+        padding: 1PX;
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+}
+.vux-1px {
+    &:after {
+        border: 1PX solid #e0e0e0;
+    }
+}
+.vux-1px-radius {
+    &:after {
+        border: 1PX solid #e0e0e0;
+        border-radius: 8px;
+    }
+}
+.vux-1px-t {
+    &:after {
+        border-top: 1PX solid #e0e0e0;
+    }
+}
+
+.vux-1px-b {
+    &:after {
+        border-bottom: 1PX solid #e0e0e0;
+    }
+}
+
+.vux-1px-tb {
+    &:after {
+        border-top: #e0e0e0 1PX solid;
+        border-bottom: #e0e0e0 1PX solid;
+    }
+}
+
+.vux-1px-l {
+    &:after {
+        border-left: 1PX solid #e0e0e0;
+    }
+}
+
+.vux-1px-r {
+    &:after {
+        border-right: 1PX solid #e0e0e0;
+    }
+}

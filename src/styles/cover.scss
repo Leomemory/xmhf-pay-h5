@@ -1,0 +1,202 @@
+@import "var";
+// cell
+.mint-cell-wrapper {
+    font-size: 14px;
+}
+.mint-cell + .mint-cell .mint-cell-wrapper{
+    background-origin: content-box;
+}
+
+// button
+.mint-button--large {
+    height: 50px;
+    & + .mint-button--large {
+        margin-top: 15px;
+    }
+}
+
+.mint-button--primary {
+    color: #fff;
+    background-color: $color-primary;
+}
+
+.mint-button--primary.is-plain {
+    border: 1px solid $color-primary;
+    background-color: transparent;
+    color: $color-primary;
+}
+
+.mint-button-text {
+    text-decoration: none;
+}
+
+// msgbox
+.tab .mint-tab-item-label{
+    font-size: 18px;
+}
+.tab .mint-navbar .mint-tab-item {
+    padding: 13px 0;
+}
+.mint-msgbox {
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+.mint-msgbox-header {
+    padding-top: 20px;
+}
+.mint-msgbox-title {
+    font-size: 14px;
+}
+.mint-msgbox-content {
+    @extend .vux-1px-b;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #3E3E3E;
+    border: none;
+    user-select: text;
+}
+
+.mint-msgbox-message {
+    color: inherit;
+    line-height: inherit;
+}
+.mint-msgbox-btns {
+    height: 50px;
+    margin-top: 1PX;
+}
+.mint-msgbox-btn {
+    line-height: 50px;
+}
+.mint-msgbox-confirm {
+    color: $color-primary;
+    &:hover {
+        color: $color-primary;
+    }
+}
+.mint-msgbox-cancel {
+    @extend .vux-1px-r;
+    color: #BDBDBD;
+    &:after {
+        top: 8px;
+        height: 140%;
+    }
+}
+
+// toast
+.mint-toast {
+    z-index: 8002;
+}
+// indicator
+.mint-indicator-wrapper {
+    z-index: 8001;
+}
+.mint-indicator-mask {
+    z-index: 8000;
+}
+
+// field
+.mint-field .mint-cell-title {
+    width: auto;
+    margin-right: 25px;
+    color: #6B6B6B;
+}
+
+// navbar
+.mint-navbar.page-part .mint-tab-item.is-selected {
+    margin-bottom: 0;
+    color: $color-primary;
+    border-bottom: 0;
+    position: relative;
+}
+.mint-navbar .mint-tab-item.is-selected {
+    margin-bottom: 0;
+    color: $color-primary;
+    position: relative;
+    border-bottom: 0;
+
+}
+.mint-navbar .mint-tab-item.is-selected:after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: $color-primary;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -15px;
+}
+.mint-navbar.page-part .mint-tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    padding: 0;
+    height: 60px;
+    position: relative;
+}
+
+.mint-navbar.page-part .mint-tab-item-label {
+    flex: 1;
+    padding-top: 25px;
+    font-size: 14px;
+}
+
+.mint-navbar.page-part .mint-tab-item.is-selected:after {
+    display: block;
+    content: '';
+    width: 3px;
+    height: 18px;
+    background-color: $color-primary;
+    position: absolute;
+    top: 21px;
+    left: 0;
+}
+
+// checkbox
+
+.mint-checkbox-input:checked + .mint-checkbox-core {
+    border-color: $color-primary;
+    background-color: $color-primary;
+}
+
+img[lazy=loading] {
+    background-color: #f9f9f9;
+}
+
+// tabbar
+.mint-tabbar > .mint-tab-item.is-selected {
+    background-color:  transparent;
+    color: $color-primary;
+}
+.mint-tabbar .mint-tab-item {
+    padding: 6PX 0 4PX;
+}
+.mint-tabbar .mint-tab-item-label {
+    font-size: 10px;
+    padding-top: 0;
+}
+
+// .mint-cell-label
+.mint-cell-label {
+    font-size: inherit;
+    margin-right: 25px;
+    color: #6B6B6B;
+}
+
+// 借还记录tabbar
+.records-navbar {
+    .mint-tab-item {
+        &.is-selected {
+            color: #03A3FF; 
+            border-bottom: 3px solid #03A3FF;
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .mint-tab-item-label {
+        font-size: 16PX;
+        
+    }
+}

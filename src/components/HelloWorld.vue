@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <mt-button type="primary">primary</mt-button>
     <h2>Essential Links</h2>
     <ul>
       <li>
