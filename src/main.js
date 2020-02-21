@@ -4,15 +4,20 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'amfe-flexible'
-import axios from '@/common/axios'
+import 'common/interceptors'
+import fastclick from 'fastclick'
 import './styles/index.scss'
 
-import { Button, Cell } from 'mint-ui'
+import { Button, Cell, Header, Field, Toast } from 'mint-ui'
 Vue.component(Button.name,Button)
 Vue.component(Cell.name,Cell)
+Vue.component(Header.name, Header);
+Vue.component(Field.name, Field);
 
-Vue.use(axios)
+Vue.$toast = Vue.prototype.$toast = Toast
+
 Vue.config.productionTip = false
+fastclick.attach(document.body)
 
 /* eslint-disable no-new */
 new Vue({

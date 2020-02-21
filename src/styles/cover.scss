@@ -2,6 +2,7 @@
 // cell
 .mint-cell-wrapper {
     font-size: 14px;
+    background-image: none;
 }
 .mint-cell + .mint-cell .mint-cell-wrapper{
     background-origin: content-box;
@@ -17,7 +18,8 @@
 
 .mint-button--primary {
     color: #fff;
-    background-color: $color-primary;
+    // background-color: $color-primary;
+    background: linear-gradient(to left,$color-grad1,$color-grad2);
 }
 
 .mint-button--primary.is-plain {
@@ -28,6 +30,14 @@
 
 .mint-button-text {
     text-decoration: none;
+}
+
+//header
+.mint-header{
+    background: #FAFAFA;
+    box-shadow:0px 0px 0px 0px rgba(204,204,204,1);
+    color: #333333;
+    font-size: 19px;
 }
 
 // msgbox
