@@ -8,11 +8,13 @@ import 'common/interceptors'
 import fastclick from 'fastclick'
 import './styles/index.scss'
 
-import { Button, Cell, Header, Field, Toast } from 'mint-ui'
+import { Button, Cell, Header, Field, Toast, Tabbar, TabItem } from 'mint-ui'
 Vue.component(Button.name,Button)
 Vue.component(Cell.name,Cell)
 Vue.component(Header.name, Header);
 Vue.component(Field.name, Field);
+Vue.component(Tabbar.name, Tabbar);
+Vue.component(TabItem.name, TabItem);
 
 Vue.$toast = Vue.prototype.$toast = Toast
 

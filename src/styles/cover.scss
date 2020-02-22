@@ -185,6 +185,10 @@ img[lazy=loading] {
 .mint-tabbar .mint-tab-item-label {
     font-size: 10px;
     padding-top: 0;
+    color: $color-tabbar-no;
+}
+.mint-tabbar .is-selected .mint-tab-item-label{
+    color: $color-tabbar-sel;
 }
 
 // .mint-cell-label

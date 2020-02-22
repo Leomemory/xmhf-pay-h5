@@ -7,7 +7,7 @@
         </mt-header>
 
         <div class="form_custom">            
-            <mt-field placeholder="请输入手机号" type="tel" v-model="userLogin.phone" :attr="{maxlength: 13}"></mt-field>
+            <mt-field placeholder="请输入手机号" type="tel" v-model="userLogin.phone" :attr="{maxlength: 11}"></mt-field>
             
             <mt-field placeholder="请输入验证码" type="tel" v-model="userLogin.otpCode" :attr="{maxlength: maxlength}">
                 <mt-button type="primary" size="small"

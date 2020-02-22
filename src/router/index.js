@@ -1,24 +1,32 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import test from '@/components/test'
 import usersConfig from './users'
+import xmhfConfig from './xmhf'
+import billConfig from './bill'
+import myConfig from './my'
 
 Vue.use(Router)
 
-// const isFree = true
+const VueRouterPush = Router.prototype.push 
+Router.prototype.push = function push (to) {
+  return VueRouterPush.call(this, to).catch(err => err)
+}
+
+const isFree = true
 const ROUTER =  new Router({
   routes: [
     ...usersConfig,
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
+    ...xmhfConfig,
+    ...billConfig,
+    ...myConfig,
     {
       path: '/test',
       name: 'test',
-      component: test
+      component: require('@/components/test').default,
+      meta: {
+          title: '测试页',
+          isFree
+      }
     }
   ]
 })
